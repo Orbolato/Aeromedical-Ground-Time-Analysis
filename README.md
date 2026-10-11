@@ -120,6 +120,4 @@ No separate software license is assigned in this repository at present. The jour
 
 - Article: https://doi.org/10.3390/sci8070169
 - MDPI supplementary material: https://www.mdpi.com/article/10.3390/sci8070169/s1
-
-An exact copy of the published MDPI supplementary ZIP is preserved at `archive/sci-4311883-supplementary.zip`. The root analysis script and the CSV tables under `analysis_outputs/` are extracted directly from that archive. `SHA256SUMS.txt` records and verifies the archive and extracted-file hashes.
 - Lucas Orbolato Carvalho: https://orbolato.github.io/

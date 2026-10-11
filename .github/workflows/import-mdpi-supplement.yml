@@ -1,0 +1,83 @@
+name: Import MDPI supplementary package
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'archive/sci-4311883-supplementary.zip'
+      - '.github/workflows/import-mdpi-supplement.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Import exact published supplementary files
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/mdpi-supp
+          mkdir -p /tmp/mdpi-supp
+          unzip -q archive/sci-4311883-supplementary.zip -d /tmp/mdpi-supp
+          SRC=/tmp/mdpi-supp/sci-4311883-supplementary
+
+          cp "$SRC/toteq_ground_time_analysis.py" ./toteq_ground_time_analysis.py
+          rm -rf analysis_outputs
+          mkdir -p analysis_outputs
+          cp "$SRC"/analysis_outputs/*.csv analysis_outputs/
+
+          {
+            echo '# SHA-256 checksums'
+            echo '# Exact published MDPI supplementary archive and extracted public files.'
+            sha256sum archive/sci-4311883-supplementary.zip
+            sha256sum toteq_ground_time_analysis.py analysis_outputs/*.csv
+          } > SHA256SUMS.txt
+
+          rm -f results/README.md
+          rmdir results 2>/dev/null || true
+
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path('README.md')
+          text = p.read_text(encoding='utf-8')
+          text = text.replace(
+              'This repository is intended to host the **published analysis script and aggregate supplementary output tables** associated with the article.',
+              'This repository contains the **published analysis script and aggregate supplementary output tables** associated with the article.'
+          )
+          text = text.replace(
+              'The aggregate CSV files are kept under `results/` in this repository.',
+              'The aggregate CSV files are kept under `analysis_outputs/`, matching the directory used by the published script.'
+          )
+          marker = 'https://www.mdpi.com/article/10.3390/sci8070169/s1\n'
+          addition = (
+              '\nAn exact copy of the published MDPI supplementary ZIP is also preserved in '
+              '`archive/sci-4311883-supplementary.zip`. The extracted script and CSV tables in this '
+              'repository are taken directly from that archive. `SHA256SUMS.txt` provides integrity '
+              'checksums for the archive and each extracted public file.\n'
+          )
+          if addition.strip() not in text:
+              text = text.replace(marker, marker + addition)
+          p.write_text(text, encoding='utf-8')
+          PY
+
+          rm -f .github/workflows/import-mdpi-supplement.yml
+
+      - name: Commit imported package
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Import published MDPI supplementary code and outputs'
+          git push

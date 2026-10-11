@@ -1,0 +1,7 @@
+stratum,n,selected_model,p50,p50_l,p50_u,p95,p95_l,p95_u,p95_upper_95,exceed_180,exceed_180_l,exceed_180_u
+Unaccompanied (mission-level),113,Gamma,81.584,75.189,88.586,154.718,139.267,170.114,167.357,0.018,0.007,0.036
+Multiple (mission-level),89,Negative binomial,265.0,255.0,280.0,375.0,350.0,395.0,390.0,0.942,0.903,0.973
+Simple (mission-level),381,Negative binomial,245.0,240.0,250.0,380.0,365.0,390.0,390.0,0.831,0.8,0.861
+Simple--Heart,190,Log-logistic,219.786,213.071,226.531,318.568,301.561,336.802,333.439,0.83,0.784,0.873
+Simple--Liver,155,Weibull,275.444,262.083,288.355,401.875,383.126,419.838,416.807,0.875,0.833,0.912
+Simple--Lung,35,Negative binomial,295.0,270.0,315.0,410.0,370.0,450.0,445.0,0.973,0.931,0.996

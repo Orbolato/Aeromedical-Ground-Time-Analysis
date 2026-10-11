@@ -1,0 +1,4 @@
+modality,model,n,p_gt_120,p_gt_180,p_gt_240
+Unaccompanied,Gamma,113,0.1717,0.0182,0.0013
+Multiple,Negative binomial,89,0.9983,0.9416,0.6618
+Simple,Negative binomial,381,0.9811,0.8307,0.5135

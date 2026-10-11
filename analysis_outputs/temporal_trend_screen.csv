@@ -1,0 +1,4 @@
+proc_type,quarters,spearman_rho_quarter_median,p_value
+Unaccompanied,10,0.104,0.776
+Multiple,9,0.226,0.559
+Simple,10,-0.402,0.249

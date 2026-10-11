@@ -1,0 +1,25 @@
+proc_type,organs,n,mean,median,min,max
+Unaccompanied,Liver,99,85.76,80.0,25,180
+Unaccompanied,Heart,7,88.57,90.0,30,140
+Unaccompanied,Lung,3,90.0,80.0,70,120
+Unaccompanied,Heart + Liver,2,147.5,147.5,95,200
+Unaccompanied,Spleen + Liver + Lymph nodes + Kidneys,1,85.0,85.0,85,85
+Unaccompanied,Cornea + Kidneys,1,40.0,40.0,40,40
+Multiple,Liver + Kidneys,27,275.74,285.0,125,360
+Multiple,Heart + Liver,25,261.6,260.0,175,390
+Multiple,Heart + Liver + Kidneys,11,207.73,200.0,175,285
+Multiple,Spleen + Liver + Lymph nodes + Kidneys,8,302.5,315.0,165,390
+Multiple,Heart + Lung,6,296.67,285.0,205,455
+Multiple,Liver,2,310.0,310.0,305,315
+Multiple,Liver + Lung,2,287.5,287.5,270,305
+Multiple,Lung + Pancreas,2,277.5,277.5,270,285
+Multiple,Spleen + Heart + Liver + Lymph nodes + Kidneys,1,315.0,315.0,315,315
+Multiple,Spleen + Lymph nodes + Kidneys,1,320.0,320.0,320,320
+Multiple,Heart,1,310.0,310.0,310,310
+Multiple,Heart + Liver + Pancreas + Kidneys,1,280.0,280.0,280,280
+Multiple,Heart + Lung + Pancreas,1,315.0,315.0,315,315
+Multiple,Liver + Lung + Kidneys,1,270.0,270.0,270,270
+Simple,Heart,190,223.32,222.5,85,375
+Simple,Liver,155,274.84,275.0,55,490
+Simple,Lung,35,297.29,295.0,170,455
+Simple,Kidneys,1,145.0,145.0,145,145

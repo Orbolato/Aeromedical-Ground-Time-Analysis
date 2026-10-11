@@ -1,0 +1,37 @@
+stratum,n,model,aic,delta_aic
+Unaccompanied (mission-level),113,Gamma,761.731,0.0
+Unaccompanied (mission-level),113,Negative binomial,762.475,0.744
+Unaccompanied (mission-level),113,Lognormal,764.985,3.254
+Unaccompanied (mission-level),113,Weibull,765.64,3.909
+Unaccompanied (mission-level),113,Log-logistic,768.28,6.549
+Unaccompanied (mission-level),113,Poisson,863.771,102.04
+Multiple (mission-level),89,Negative binomial,695.277,0.0
+Multiple (mission-level),89,Gamma,695.739,0.463
+Multiple (mission-level),89,Lognormal,697.96,2.683
+Multiple (mission-level),89,Weibull,699.415,4.138
+Multiple (mission-level),89,Log-logistic,699.5,4.223
+Multiple (mission-level),89,Poisson,749.638,54.361
+Simple (mission-level),381,Negative binomial,3103.292,0.0
+Simple (mission-level),381,Log-logistic,3103.502,0.21
+Simple (mission-level),381,Gamma,3110.538,7.246
+Simple (mission-level),381,Weibull,3111.597,8.305
+Simple (mission-level),381,Lognormal,3141.9,38.608
+Simple (mission-level),381,Poisson,3707.209,603.917
+Simple--Heart,190,Log-logistic,1413.046,0.0
+Simple--Heart,190,Negative binomial,1413.306,0.26
+Simple--Heart,190,Gamma,1416.036,2.99
+Simple--Heart,190,Weibull,1423.745,10.699
+Simple--Heart,190,Lognormal,1424.262,11.216
+Simple--Heart,190,Poisson,1487.964,74.918
+Simple--Liver,155,Weibull,1299.754,0.0
+Simple--Liver,155,Log-logistic,1317.812,18.058
+Simple--Liver,155,Negative binomial,1318.228,18.474
+Simple--Liver,155,Gamma,1324.363,24.609
+Simple--Liver,155,Lognormal,1351.909,52.154
+Simple--Liver,155,Poisson,1653.361,353.607
+Simple--Lung,35,Negative binomial,282.584,0.0
+Simple--Lung,35,Gamma,282.632,0.048
+Simple--Lung,35,Log-logistic,283.039,0.455
+Simple--Lung,35,Lognormal,283.167,0.583
+Simple--Lung,35,Weibull,285.121,2.537
+Simple--Lung,35,Poisson,309.111,26.527

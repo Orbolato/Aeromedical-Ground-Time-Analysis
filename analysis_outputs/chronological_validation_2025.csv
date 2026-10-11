@@ -1,0 +1,4 @@
+proc_type,train_n_2023_2024,test_n_2025,selected_model_train,train_predicted_p95,test_exceed_p95_rate,train_predicted_exceed_180,test_observed_exceed_180,test_median
+Unaccompanied,91,22,Gamma,152.412,0.045,0.016,0.0,90.0
+Multiple,69,20,Negative binomial,380.0,0.0,0.945,0.9,260.0
+Simple,312,69,Negative binomial,380.0,0.029,0.852,0.812,225.0

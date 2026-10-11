@@ -1,0 +1,7 @@
+metric,value
+organ_record_rows,712
+raw_unique_misrel_values,581
+numeric_unique_misrel_values,579
+non_numeric_misrel_rows,4
+mission_level_rows_after_key_repair,583
+missions_with_repeated_organ_rows,92

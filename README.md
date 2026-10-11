@@ -23,9 +23,11 @@ The study analyzed **583 mission-level observations** derived from **712 organ-r
 
 ## Repository status
 
-This repository is intended to host the **published analysis script and aggregate supplementary output tables** associated with the article. The original supplementary package is also available from MDPI:
+This repository contains the **published analysis script and aggregate supplementary output tables** associated with the article. The original supplementary package is also available from MDPI:
 
 https://www.mdpi.com/article/10.3390/sci8070169/s1
+
+An exact copy of the published MDPI supplementary ZIP is preserved at `archive/sci-4311883-supplementary.zip`. The root analysis script and the CSV tables under `analysis_outputs/` are extracted directly from that archive. `SHA256SUMS.txt` records and verifies the archive and extracted-file hashes.
 
 The underlying mission-level records are **not public**. They are maintained by the Brazilian Air Force (FAB) / Aerospace Operations Command (COMAE) and are subject to operational-security restrictions. Consequently, full reproduction from the raw source data requires institutional data access.
 
@@ -46,7 +48,7 @@ The article identifies the following supporting files:
 | Table S8 | `temporal_trend_screen.csv` | Spearman temporal-trend screening |
 | Table S9 | `chronological_validation_2025.csv` | Chronological validation results |
 
-The aggregate CSV files are kept under `results/` in this repository.
+The aggregate CSV files are kept under `analysis_outputs/`, matching the directory used by the published script.
 
 ## Software environment
 
@@ -118,4 +120,6 @@ No separate software license is assigned in this repository at present. The jour
 
 - Article: https://doi.org/10.3390/sci8070169
 - MDPI supplementary material: https://www.mdpi.com/article/10.3390/sci8070169/s1
+
+An exact copy of the published MDPI supplementary ZIP is preserved at `archive/sci-4311883-supplementary.zip`. The root analysis script and the CSV tables under `analysis_outputs/` are extracted directly from that archive. `SHA256SUMS.txt` records and verifies the archive and extracted-file hashes.
 - Lucas Orbolato Carvalho: https://orbolato.github.io/

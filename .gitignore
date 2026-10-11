@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local raw or restricted data
+raw_data/
+data/private/
+data/restricted/
+*.xlsx
+*.xls
+
+# Local generated figures / temporary outputs
+figures/
+output/
+outputs/
+.tmp/

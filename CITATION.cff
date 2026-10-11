@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated Sci article."
+title: "Aeromedical Ground-Time Analysis"
+type: software
+authors:
+  - family-names: Luiz
+    given-names: Bruno Santos
+  - family-names: Carvalho
+    given-names: Lucas Orbolato
+    orcid: "https://orcid.org/0000-0002-8402-5832"
+repository-code: "https://github.com/Orbolato/Aeromedical-Ground-Time-Analysis"
+url: "https://doi.org/10.3390/sci8070169"
+preferred-citation:
+  type: article
+  title: "Probabilistic Modeling of Critical Ground Times in Aeromedical Organ Transport: A Brazilian Air Force Case Study"
+  authors:
+    - family-names: Luiz
+      given-names: Bruno Santos
+    - family-names: Carvalho
+      given-names: Lucas Orbolato
+      orcid: "https://orcid.org/0000-0002-8402-5832"
+    - family-names: Pamplona
+      given-names: Daniel Alberto
+  journal: Sci
+  year: 2026
+  volume: 8
+  issue: 7
+  start: 169
+  doi: "10.3390/sci8070169"

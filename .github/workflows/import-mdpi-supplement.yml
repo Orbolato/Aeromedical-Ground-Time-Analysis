@@ -1,0 +1,39 @@
+name: Import MDPI supplement
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'sci-4311883-supplementary.zip'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract published supplementary package
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/mdpi_supp
+          mkdir -p /tmp/mdpi_supp
+          unzip -q sci-4311883-supplementary.zip -d /tmp/mdpi_supp
+          SRC=/tmp/mdpi_supp/sci-4311883-supplementary
+          cp "$SRC/toteq_ground_time_analysis.py" ./toteq_ground_time_analysis.py
+          rm -rf analysis_outputs
+          cp -R "$SRC/analysis_outputs" ./analysis_outputs
+      - name: Commit authoritative published files
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add toteq_ground_time_analysis.py analysis_outputs
+          if git diff --cached --quiet; then
+            echo 'No changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Import published MDPI supplementary code and outputs'
+          git push

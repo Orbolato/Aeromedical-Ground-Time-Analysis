@@ -1,0 +1,4 @@
+# Preserve byte-for-byte copies of the published MDPI supplementary artifacts.
+/analysis_outputs/*.csv -text
+/toteq_ground_time_analysis.py -text
+/archive/*.zip binary
